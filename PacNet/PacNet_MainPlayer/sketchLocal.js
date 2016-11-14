@@ -1,3 +1,10 @@
+//A networked Pacman game 
+//A main player controls the pacman using a joystick + Arduino
+//The balls are controlled by each player that open the game's webpage 
+//Following sketch draws the pacman and publishes the data to pubnub 
+//It also subcribes to events from sketch.js to draw the circles 
+//Code by Afrooz Samaei - November 2016
+
 // server variables
 var myUserID;
 var dataServer;
@@ -32,8 +39,8 @@ function setup() {
     
     // initialize pubnub
     dataServer = PUBNUB.init({
-        publish_key: 'pub-c-4596a555-385b-4236-9944-6ff789f5522b', 
-        subscribe_key: 'sub-c-a6164080-a7cf-11e6-a7a5-0619f8945a4f'
+        publish_key: '', 
+        subscribe_key: ''
         , uuid: myUserID
         , ssl: true 
     });
